@@ -49,11 +49,11 @@ module cla_tb;
     initial begin
         for (i = 0; i < 6; i = i + 1) begin
             if (i < 3) begin
-                a = $urandom_range(0, 32767);   
-                b = $urandom_range(0, 32767);
+                a = $random; //$urandom_range(0, 32767);   
+                b = $random; 
             end else begin
-                a = -$urandom_range(0, 32767); 
-                b = -$urandom_range(0, 32767);
+                a = -$random;  
+                b = -$random; 
             end
 
             #5; 
