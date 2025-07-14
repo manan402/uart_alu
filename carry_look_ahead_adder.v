@@ -35,34 +35,3 @@ module cla_adder #(parameter N = 16)(
 
 endmodule
 
-module cla_tb;
-    parameter N = 16;
-
-    reg  signed [N-1:0] a, b;
-    wire signed [N-1:0] sum;
-    wire [4:0] flags; // {V, C, N, Z, P}
-
-    integer i;
-
-    cla_adder #(.N(N)) uut (.a(a), .b(b), .sum(sum), .flags(flags));
-
-    initial begin
-        for (i = 0; i < 6; i = i + 1) begin
-            if (i < 3) begin
-                a = $random; //$urandom_range(0, 32767);   
-                b = $random; 
-            end else begin
-                a = -$random;  
-                b = -$random; 
-            end
-
-            #5; 
-
-            $display("Test %0d: a = %0d, b = %0d -> sum = %0d, sum = %016b | Flags = {V=%b, C=%b, N=%b, Z=%b, P=%b}",
-            i+1, a, b, sum, sum,
-            flags[4], flags[3], flags[2], flags[1], flags[0]);
-        end
-
-        $finish;
-    end
-endmodule
