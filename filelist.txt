@@ -1,0 +1,6 @@
+alu_core.v
+alu_logic_unit.v
+carry_look_ahead_adder.v
+rotate_unit.v
+shift_unit.v
+signed_subtractor.v
