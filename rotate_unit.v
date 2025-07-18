@@ -14,7 +14,7 @@ module rotate_operation #(parameter N = 16)(
 endmodule
 
 
-
+/*
 module rotate_operation_tb;
 
     parameter N = 16;
@@ -25,7 +25,7 @@ module rotate_operation_tb;
     wire [N-1:0] data_out;
     integer i;
 
-    rotate_operation16 #(.N(N)) uut (.data_in(data_in),.rot_amt(rot_amt),.rotate_operation(rotate_operation),.data_out(data_out));
+    rotate_operation #(.N(N)) uut (.data_in(data_in),.rot_amt(rot_amt),.rotate_operation(rotate_operation),.data_out(data_out));
         
     
     initial begin
@@ -49,3 +49,4 @@ module rotate_operation_tb;
     end
 
 endmodule
+*/

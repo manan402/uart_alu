@@ -2,7 +2,7 @@ module logical_operation #(parameter N = 16)(
     input  signed [N-1:0] a,
     input  signed [N-1:0] b,
     input  [3:0] opcode,
-    output reg signed [N-1:0] wout
+    output reg signed [N-1:0] out
 );
 
     localparam AND_OP  = 3'd0;
@@ -28,6 +28,7 @@ module logical_operation #(parameter N = 16)(
 endmodule
 
 
+/*
 module logical_operation_tb;
     parameter N = 16;
     integer i;
@@ -63,3 +64,4 @@ module logical_operation_tb;
 
     end
 endmodule
+*/

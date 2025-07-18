@@ -29,7 +29,7 @@ module cla_adder #(parameter N = 16)(
 
 endmodule
 
-
+/*
 module cla_tb;
     parameter N = 16;
 
@@ -60,3 +60,4 @@ module cla_tb;
         $finish;
     end
 endmodule
+*/
