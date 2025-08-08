@@ -1,6 +1,11 @@
+alu_control_uart.v
 alu_core.v
 alu_logic_unit.v
 carry_look_ahead_adder.v
 rotate_unit.v
 shift_unit.v
 signed_subtractor.v
+top_alu_uart.v
+top_alu_uart_tb.v
+uart_rx.v
+uart_tx.v
